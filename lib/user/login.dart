@@ -4,6 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../onboarding/intro_1.dart';
+import 'forgot_password.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -133,11 +136,11 @@ class _LoginState extends State<Login> {
                                 child: GestureDetector(
 
                                   onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             Forget()));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                Forget()));
                                   },
                                   child: Text(
                                     'Forgot Password?',
@@ -172,30 +175,40 @@ class _LoginState extends State<Login> {
                                   Padding(
                                     padding: const EdgeInsets.only(left: 80,top: 5),
                                     child: Center(
-                                      child: Container(
-                                        height: 60.0,
-                                        width: 130,
-                                        decoration: BoxDecoration(
-                                          color: Color.fromRGBO(255, 87, 87,30),
-                                          borderRadius: BorderRadius.circular(20),
-                                        ),
-                                        // ignore: deprecated_member_use
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children:[Text(
-                                            'Login',
-                                            style: GoogleFonts.roboto(
-                                              fontSize: 15.0,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold
-                                            ),
+                                      child: InkWell(
+                                        onTap: (){
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Intro_1()));
+
+                                        },
+                                        child: Container(
+                                          height: 60.0,
+                                          width: 130,
+                                          decoration: BoxDecoration(
+                                            color: Color.fromRGBO(255, 87, 87,30),
+                                            borderRadius: BorderRadius.circular(20),
                                           ),
-                                            SizedBox(
-                                              width: 10,
+                                          // ignore: deprecated_member_use
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            children:[Text(
+                                              'Login',
+                                              style: GoogleFonts.roboto(
+                                                fontSize: 15.0,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold
+                                              ),
                                             ),
-                                            Icon(Icons.arrow_forward_ios_rounded,size: 16,color: Colors.white,),
-                                          ],
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Icon(Icons.arrow_forward_ios_rounded,size: 16,color: Colors.white,),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
