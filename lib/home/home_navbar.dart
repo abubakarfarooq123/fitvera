@@ -1,8 +1,8 @@
 import 'package:fitvera/home/profile.dart';
 import 'package:fitvera/home/receipy_book.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:line_icons/line_icons.dart';
 
 import 'gym.dart';
 import 'home.dart';
@@ -16,174 +16,73 @@ class homeNavBar extends StatefulWidget {
 }
 
 class _homeNavBarState extends State<homeNavBar> {
-  bool? resizeToAvoidBottomInset;
-  int currentTab = 0;
-  final List<Widget> screens = [
-    Home(),
-    Gym(),
-    Receipy_Book(),
-    Profile(),
-  ];
-  final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = Home();
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: PageStorage(
-        child: currentScreen,
-        bucket: bucket,
+      body: Center(
+        child: _getPage(_selectedIndex),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10,
-        color: Color.fromRGBO(29, 69, 100, 30),
-        child: Container(
-          height: 60,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  MaterialButton(
-                    minWidth: 60,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen = Home();
-                        currentTab = 0;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.home,
-                          color: currentTab == 0
-                              ?Color.fromRGBO(255, 87, 87,30)
-                          : Colors.white,
-                          size: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 2,top: 5),
-                          child: Text(
-                            "Home",
-                            style: GoogleFonts.roboto(
-                                color: currentTab == 0
-                                    ? Color.fromRGBO(255, 87, 87,30)
-                                    : Colors.white),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  MaterialButton(
-                    minWidth: 40,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen = Gym();
-                        currentTab = 1;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.dumbbell,
-                          color: currentTab == 1
-                              ? Color.fromRGBO(255, 87, 87,30)
-                              : Colors.white,
-                          size: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8,top: 5),
-                          child: Text(
-                            "Program",
-                            style: GoogleFonts.roboto(
-                                color: currentTab == 1
-                                    ? Color.fromRGBO(255, 87, 87,30)
-                                    : Colors.white),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              //Right Tab bar
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  MaterialButton(
-                    minWidth: 60,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen = Receipy_Book();
-                        currentTab = 3;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.book,
-                          color: currentTab == 3
-                              ? Color.fromRGBO(255, 87, 87,30)
-                              : Colors.white,
-                          size: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 2,top: 5),
-                          child: Text(
-                            "Recipe Book",
-                            style: GoogleFonts.roboto(
-                              color: currentTab == 3
-                                  ? Color.fromRGBO(255, 87, 87,30)
-                                  : Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  MaterialButton(
-                    minWidth: 40,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen = Profile();
-                        currentTab = 4;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.account_circle,
-                          color: currentTab == 4
-                              ? Color.fromRGBO(255, 87, 87,30)
-                              : Colors.white,
-                          size: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 2,top: 5),
-                          child: Text(
-                            "Profile",
-                            style: GoogleFonts.roboto(
-                                color: currentTab == 4
-                                    ? Color.fromRGBO(255, 87, 87,30)
-                                    : Colors.white),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
+      bottomNavigationBar: Container(
+        height: 80,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15),topLeft: Radius.circular(15),),
+          color: Color.fromRGBO(29, 69, 100, 30),
+        ),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10,left: 3,right: 3),
+            child: GNav(
+              gap: 10,
+              activeColor: Colors.white,
+              color: Colors.white,
+              iconSize: 24,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              duration: Duration(milliseconds: 500),
+              tabBackgroundColor: Color.fromRGBO(255, 87, 87,30),
+              tabs: [
+                GButton(
+                  icon: LineIcons.home,
+                  text: 'Home',
+                ),
+                GButton(
+                  icon: LineIcons.dumbbell,
+                  text: 'Programs',
+                ),
+                GButton(
+                  icon: LineIcons.utensils,
+                  text: 'Recipe Book',
+                ),
+                GButton(
+                  icon: LineIcons.user,
+                  text: 'Profile',
+                ),
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+            ),
           ),
         ),
-      ),
+
     );
+  }
+
+  Widget _getPage(int index) {
+    switch (index) {
+      case 0:
+        return Home();
+      case 1:
+        return Gym();
+      case 2:
+        return Receipy_Book();
+      case 3:
+        return Profile();
+      default:
+        return Center(child: Text('Page not found'));
+    }
   }
 }
