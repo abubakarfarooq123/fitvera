@@ -1,4 +1,6 @@
 import 'package:fitvera/home/notification.dart';
+import 'package:fitvera/home/profile/about_you.dart';
+import 'package:fitvera/home/workouts/all_workouts.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +27,10 @@ class _HomeState extends State<Home> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 10,top: 20),
-                  child: IconButton(onPressed: (){},
+                  child: IconButton(onPressed: (){
+                    Navigator.pushReplacement(
+                        context, MaterialPageRoute(builder: (context) => About_you()));
+                  },
                     icon: Icon(
                       Icons.category,size: 30,
                     color: Color.fromRGBO(29, 69, 100, 30),
@@ -299,7 +304,11 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding: const EdgeInsets.only(top: 6),
                     child: InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) => All_workouts()));
+
+                      },
                       child: Text("View All",style: GoogleFonts.poppins(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
