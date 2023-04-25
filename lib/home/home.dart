@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.only(left: 10,top: 20),
                   child: IconButton(onPressed: (){
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context, MaterialPageRoute(builder: (context) => About_you()));
                   },
                     icon: Icon(
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.only(left: 40,top: 26),
                   child: IconButton(onPressed: (){
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context, MaterialPageRoute(builder: (context) => Notifications()));
                   },
                     icon: Icon(
@@ -131,30 +131,30 @@ class _HomeState extends State<Home> {
                   Expanded(
                     child: InkWell(
                       onTap: (){
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) => Hot_program()));
                       },
                       child: Stack(
                         children: [
                           Container(
-                          height: 230,
+                          height: 240,
                           width: 180,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               image: DecorationImage(
-                                  image: AssetImage("assets/images/v.png"),
+                                  image: AssetImage("assets/images/te.jpg"),
                                   fit: BoxFit.fill)),
                         ),
                           Positioned.fill(
                             child: Container(
-                              height: 230,
+                              height: 240,
                               width: 180,
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.black.withOpacity(0.3),
                                     spreadRadius: 2,
-                                    blurRadius: 15,
+                                    blurRadius: 18,
                                   ),
                                 ],
                               ),
@@ -221,66 +221,87 @@ class _HomeState extends State<Home> {
                     width: 10,
                   ),
                   Expanded(
-                    child: Container(
-                      height: 230,
-                      width: 180,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/aa.png"),
-                              fit: BoxFit.fill)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 10, top: 130),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Pull Up",
-                              style: GoogleFonts.poppins(
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Sweaty",
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Text(
-                                  " Challenge.",
-                                  style: GoogleFonts.poppins(
-                                      color: Color.fromRGBO(255, 87, 87, 30),
-                                      fontWeight: FontWeight.bold),
+                    child: Stack(
+                      children: [
+                        Container(
+                        height: 240,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/balll.jpg"),
+                                fit: BoxFit.fill)),
+
+                      ),
+                        Positioned.fill(
+                          child: Container(
+                            height: 240,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.3),
+                                  spreadRadius: 2,
+                                  blurRadius: 18,
                                 ),
                               ],
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: 130,
-                              height: 25,
-                              decoration: BoxDecoration(
-                                color: Colors.grey.shade300,
-                                borderRadius: BorderRadius.circular(20),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 130),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Pull Up",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Sweaty",
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        " Challenge.",
+                                        style: GoogleFonts.poppins(
+                                            color: Color.fromRGBO(255, 87, 87, 30),
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: 130,
+                                    height: 25,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.shade300,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Home Based Program",
+                                        style: GoogleFonts.poppins(
+                                            color: Colors.black, fontSize: 8),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              child: Center(
-                                child: Text(
-                                  "Home Based Program",
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.black, fontSize: 8),
-                                ),
-                              ),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+
+                      ],
                     ),
                   ),
                 ],
@@ -302,10 +323,10 @@ class _HomeState extends State<Home> {
                     width: 155,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 6),
+                    padding: const EdgeInsets.only(top: 6,left: 35),
                     child: InkWell(
                       onTap: (){
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) => All_workouts()));
 
                       },
@@ -328,14 +349,15 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                              height: 180,
-                              width: 230,
+                              height: 270,
+                              width: 240,
                               decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
-                                      image: AssetImage("assets/images/loo.png"),
+                                      image: AssetImage("assets/images/siti.jpg"),
                                       fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -422,14 +444,15 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 255,
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/sit.png"),
+                                image: AssetImage("assets/images/iii.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(

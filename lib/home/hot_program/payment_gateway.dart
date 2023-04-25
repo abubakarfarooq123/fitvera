@@ -30,7 +30,7 @@ class _Payment_gatewayState extends State<Payment_gateway> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                           context, MaterialPageRoute(builder: (context) => homeNavBar()));
                     },
                     child: Container(
@@ -52,7 +52,7 @@ class _Payment_gatewayState extends State<Payment_gateway> {
                   Padding(
                     padding: const EdgeInsets.only(left: 40, top: 5),
                     child: Text(
-                      "Patment Gateway",
+                      "Payment Gateway",
                       style: GoogleFonts.poppins(
                         color: Colors.black,
                         fontSize: 22,
@@ -161,7 +161,7 @@ class _Payment_gatewayState extends State<Payment_gateway> {
                       children: [
                         InkWell(
                           onTap:(){
-                            Navigator.pushReplacement(
+                            Navigator.push(
                                 context, MaterialPageRoute(builder: (context) => Card_info()));
 
                           },

@@ -26,7 +26,7 @@ class _All_workoutsState extends State<All_workouts> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                           context, MaterialPageRoute(builder: (context) => homeNavBar()));
                     },
                     child: Container(
@@ -122,14 +122,15 @@ class _All_workoutsState extends State<All_workouts> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 240,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/loo.png"),
+                                image: AssetImage("assets/images/siti.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -216,14 +217,15 @@ class _All_workoutsState extends State<All_workouts> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 255,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/sit.png"),
+                                image: AssetImage("assets/images/iii.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -307,6 +309,7 @@ class _All_workoutsState extends State<All_workouts> {
                   ],
                 ),
               ),
+
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20,top: 15),
@@ -319,21 +322,22 @@ class _All_workoutsState extends State<All_workouts> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10,top: 10),
-              child: SingleChildScrollView(
+              child:SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 240,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/loo.png"),
+                                image: AssetImage("assets/images/siti.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -420,14 +424,15 @@ class _All_workoutsState extends State<All_workouts> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 255,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/sit.png"),
+                                image: AssetImage("assets/images/iii.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -511,6 +516,7 @@ class _All_workoutsState extends State<All_workouts> {
                   ],
                 ),
               ),
+
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20,top: 15),
@@ -523,21 +529,22 @@ class _All_workoutsState extends State<All_workouts> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10,top: 10),
-              child: SingleChildScrollView(
+              child:SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 240,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/loo.png"),
+                                image: AssetImage("assets/images/siti.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(
@@ -624,14 +631,15 @@ class _All_workoutsState extends State<All_workouts> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8,right: 8),
                       child: Container(
-                        height: 180,
-                        width: 230,
+                        height: 270,
+                        width: 255,
                         decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage("assets/images/sit.png"),
+                                image: AssetImage("assets/images/iii.jpg"),
                                 fit: BoxFit.fill)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 120),
+                          padding: const EdgeInsets.only(left: 10, top: 180),
                           child: Row(
                             children: [
                               Column(

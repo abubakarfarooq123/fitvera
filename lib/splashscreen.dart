@@ -76,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void navigationPage() async {
-    Navigator.pushReplacement(
+    Navigator.push(
         context, MaterialPageRoute(builder: (context) => Onbording()));
   }
 

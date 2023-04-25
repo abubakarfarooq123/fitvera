@@ -23,7 +23,7 @@ class _Card_infoState extends State<Card_info> {
               padding: const EdgeInsets.only(left: 10, top: 30),
               child:  InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                           context, MaterialPageRoute(builder: (context) => Payment_gateway()));
 
                     },

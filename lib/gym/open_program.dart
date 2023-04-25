@@ -1,15 +1,17 @@
+import 'package:fitvera/gym/start_open_program.dart';
+import 'package:fitvera/gym/view_bio.dart';
 import 'package:fitvera/home/hot_program/payment_gateway.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-class Hot_program extends StatefulWidget {
-  const Hot_program({Key? key}) : super(key: key);
+class Open_Program extends StatefulWidget {
+  const Open_Program({Key? key}) : super(key: key);
 
   @override
-  State<Hot_program> createState() => _Hot_programState();
+  State<Open_Program> createState() => _Open_ProgramState();
 }
 
-class _Hot_programState extends State<Hot_program> {
+class _Open_ProgramState extends State<Open_Program> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,16 +21,16 @@ class _Hot_programState extends State<Hot_program> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              height: 360,
+              height: 500,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/aq1.png"),
+                  image: AssetImage("assets/images/up.jpg"),
                   fit: BoxFit.fill,
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 10, top: 170),
+                padding: const EdgeInsets.only(left: 10, top: 250),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,11 +47,11 @@ class _Hot_programState extends State<Hot_program> {
                           Icons.play_arrow,
                           size: 34,
                           color: Color.fromRGBO(255, 87, 87,30),
-                            ),
+                        ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 30),
+                      padding: const EdgeInsets.only(top: 80),
                       child: Container(
                         width: 130,
                         height: 35,
@@ -62,7 +64,7 @@ class _Hot_programState extends State<Hot_program> {
                             "Home Based Challenge",
                             style: GoogleFonts.poppins(
                                 color: Colors.black, fontSize: 9.5,
-                            fontWeight: FontWeight.bold
+                                fontWeight: FontWeight.bold
                             ),
                           ),
                         ),
@@ -73,8 +75,8 @@ class _Hot_programState extends State<Hot_program> {
                       child: Text(
                         "Hot Body",
                         style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 18
+                            color: Colors.white,
+                            fontSize: 18
                         ),
                       ),
                     ),
@@ -88,8 +90,8 @@ class _Hot_programState extends State<Hot_program> {
                           Text(
                             "New Year",
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontSize: 16
+                                color: Colors.white,
+                                fontSize: 16
                             ),
                           ),
                           Text(
@@ -97,7 +99,7 @@ class _Hot_programState extends State<Hot_program> {
                             style: GoogleFonts.poppins(
                                 color: Color.fromRGBO(255, 87, 87, 30),
                                 fontWeight: FontWeight.bold,
-                            fontSize: 16),
+                                fontSize: 16),
                           ),
                         ],
                       ),
@@ -125,19 +127,19 @@ class _Hot_programState extends State<Hot_program> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
-                          child: Icon(
-                            FontAwesomeIcons.stopwatch,
-                            color: Colors.green,
-                            size: 36,
-                          ),
+                        child: Icon(
+                          FontAwesomeIcons.stopwatch,
+                          color: Colors.green,
+                          size: 36,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 7,top: 5),
                       child: Text("30-40 Mins",style: GoogleFonts.poppins(
-                        color: Colors.black,
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold
+                          color: Colors.black,
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold
 
                       ),),
                     ),
@@ -278,9 +280,9 @@ class _Hot_programState extends State<Hot_program> {
             Padding(
               padding: const EdgeInsets.only(left: 10,top: 20),
               child: Text("Program Overview:",style: GoogleFonts.poppins(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 18
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18
               ),),
             ),
             Padding(
@@ -288,17 +290,48 @@ class _Hot_programState extends State<Hot_program> {
               child: Text("Debitis dolores earum qui aliquid neque iure at. Deserunt nobis ea reprehenderit. Nobis tempore illum neque tenetur similique consectetur accusantium molestiae sed. Et voluptatem voluptate nobis doloremque consequuntur blanditiis aut quam et. Sed dolor et autem voluptatibus minima et eligendi ducimus.",
                 textAlign: TextAlign.start,
                 style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontSize: 12
-              ),),
+                    color: Colors.black,
+                    fontSize: 12
+                ),),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 20, right: 18, top: 80, bottom: 10),
+                  left: 20, right: 18, top: 15, bottom: 10),
               child: InkWell(
                 onTap: (){
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Payment_gateway()));
+                      context, MaterialPageRoute(builder: (context) => View_Bio()));
+                },
+                child: Container(
+                  height: 50,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(29, 69, 100, 30),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Bio",
+                      style:
+                      GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold
+
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 20, right: 18,top: 5, bottom: 10),
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Start_open_program()));
                 },
                 child: Container(
                   height: 50,
@@ -314,7 +347,7 @@ class _Hot_programState extends State<Hot_program> {
                       GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 15,
-                        fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold
 
                       ),
                     ),
@@ -322,7 +355,9 @@ class _Hot_programState extends State<Hot_program> {
                 ),
               ),
             ),
-
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),

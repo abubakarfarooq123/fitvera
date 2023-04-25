@@ -101,11 +101,11 @@ class Intro_1 extends StatelessWidget {
               padding: const EdgeInsets.all(18.0),
               child: Container(
                 width: 340,
-                height: 430,
+                height: 460,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                      image: AssetImage("assets/images/v.png"),
+                      image: AssetImage("assets/images/te.jpg"),
                       fit: BoxFit.fill,
                     )),
               ),
@@ -410,7 +410,7 @@ class Intro_1 extends StatelessWidget {
                   left: 20, right: 18, top: 10, bottom: 10),
               child: InkWell(
                 onTap:(){
-                  Navigator.pushReplacement(
+                  Navigator.push(
                       context, MaterialPageRoute(builder: (context) => Intro_2()));
                 },
                 child: Container(
@@ -444,7 +444,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -510,7 +510,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -629,7 +629,7 @@ class Intro_1 extends StatelessWidget {
                   left: 20, right: 18, top: 10, bottom: 10),
               child: InkWell(
                 onTap: (){
-                  Navigator.pushReplacement(
+                  Navigator.push(
                       context, MaterialPageRoute(builder: (context) => Intro_2()));
                 },
                 child: Container(
@@ -663,7 +663,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -729,7 +729,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -848,7 +848,7 @@ class Intro_1 extends StatelessWidget {
                   left: 20, right: 18, top: 10, bottom: 10),
               child: InkWell(
                 onTap: (){
-                  Navigator.pushReplacement(
+                  Navigator.push(
                       context, MaterialPageRoute(builder: (context) => Intro_2()));
                 },
                 child: Container(
@@ -882,7 +882,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -948,7 +948,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -1018,7 +1018,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),
@@ -1084,7 +1084,7 @@ class Intro_1 extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/aj.png"),
+                              image: AssetImage("assets/images/balll.jpg"),
                               fit: BoxFit.fill)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, top: 130),

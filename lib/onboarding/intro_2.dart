@@ -24,13 +24,13 @@ class Intro_2 extends StatelessWidget {
       'I want this',
     ];
     List<Function> buttonActionList = [
-      () => Navigator.pushReplacement(
+      () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => Home())),
-      () => Navigator.pushReplacement(
+      () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => Home())),
-      () => Navigator.pushReplacement(
+      () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => Home())),
-      () => Navigator.pushReplacement(
+      () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => Home())),
     ];
 
