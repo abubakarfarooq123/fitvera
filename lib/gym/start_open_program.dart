@@ -3,7 +3,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+import 'analytics.dart';
+import 'analytics_progress.dart';
+import 'cardio_strech_screen.dart';
+import 'cardio_strectch_details.dart';
 import 'day_detail.dart';
+import 'nuitrition.dart';
 
 class Start_open_program extends StatefulWidget {
   const Start_open_program({Key? key}) : super(key: key);
@@ -230,55 +235,77 @@ class _Start_open_programState extends State<Start_open_program> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 30,
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text("Nutrition",style: GoogleFonts.poppins(
-                            color: Color.fromRGBO(255, 87, 87,30),
-                            fontSize: 11,
-                            fontWeight: FontWeight.bold
-                        ),),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      height: 30,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text("Cardio & Stretch",style: GoogleFonts.poppins(
-                            color: Color.fromRGBO(255, 87, 87,30),
-                            fontSize: 11,
-                            fontWeight: FontWeight.bold
-                        ),),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Nutrition()));
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text("Nutrition",style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(255, 87, 87,30),
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold
+                          ),),
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      height: 30,
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(10),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Cardio_Strech_Screen()));
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text("Cardio & Stretch",style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(255, 87, 87,30),
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold
+                          ),),
+                        ),
                       ),
-                      child: Center(
-                        child: Text("Analytics",style: GoogleFonts.poppins(
-                            color: Color.fromRGBO(255, 87, 87,30),
-                            fontSize: 11,
-                            fontWeight: FontWeight.bold
-                        ),),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Analytics_Progress()));
+
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text("Analytics",style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(255, 87, 87,30),
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold
+                          ),),
+                        ),
                       ),
                     ),
                     SizedBox(

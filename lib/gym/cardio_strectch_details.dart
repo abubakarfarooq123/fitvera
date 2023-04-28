@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
-class Gym_Warm_up extends StatefulWidget {
-  const Gym_Warm_up({Key? key}) : super(key: key);
+class Cardio_stretch_detail extends StatefulWidget {
+  const Cardio_stretch_detail({Key? key}) : super(key: key);
 
   @override
-  State<Gym_Warm_up> createState() => _Gym_Warm_upState();
+  State<Cardio_stretch_detail> createState() => _Cardio_stretch_detailState();
 }
 
-class _Gym_Warm_upState extends State<Gym_Warm_up>  with TickerProviderStateMixin{
+class _Cardio_stretch_detailState extends State<Cardio_stretch_detail>  with TickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +50,9 @@ class _Gym_Warm_upState extends State<Gym_Warm_up>  with TickerProviderStateMixi
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 80, top: 5),
+                    padding: const EdgeInsets.only(left: 50, top: 5),
                     child: Text(
-                      "Warm Up",
+                      "Cardio & Stretch",
                       style: GoogleFonts.poppins(
                         color: Colors.black,
                         fontSize: 22,
@@ -70,8 +70,8 @@ class _Gym_Warm_upState extends State<Gym_Warm_up>  with TickerProviderStateMixi
               indicatorColor: Color.fromRGBO(255, 87, 87,30),
 
               tabs: [
-                Tab(text: 'Upper Body'),
-                Tab(text: 'Lower Body'),
+                Tab(text: 'HITT'),
+                Tab(text: 'Running'),
               ],
               labelStyle:
               GoogleFonts.poppins(color: Color.fromRGBO(255, 87, 87,30),
@@ -95,9 +95,9 @@ class _Gym_Warm_upState extends State<Gym_Warm_up>  with TickerProviderStateMixi
                           height: 200,
                           width: 280,
                           decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/scout.png"),
-                            )
+                              image: DecorationImage(
+                                image: AssetImage("assets/images/scout.png"),
+                              )
                           ),
                         ),
                       ),
@@ -106,10 +106,10 @@ class _Gym_Warm_upState extends State<Gym_Warm_up>  with TickerProviderStateMixi
                         child: Text(
                           "Lower Body Warm Up",
                           style: GoogleFonts.poppins(
-                          color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18
-                        ),),
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18
+                          ),),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10,top: 10),

@@ -1,3 +1,4 @@
+import 'package:fitvera/gym/gym_warm_up.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,6 +44,9 @@ class _Day_DetailState extends State<Day_Detail> {
                       padding: const EdgeInsets.only(left: 220,top: 50),
                       child: InkWell(
                         onTap: (){
+                          Navigator.push(
+                              context, MaterialPageRoute(
+                              builder: (context) => Gym_Warm_up()));
                         },
                         child: Container(
                           height: 30,
