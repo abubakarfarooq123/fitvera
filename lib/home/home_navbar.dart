@@ -1,9 +1,9 @@
-import 'package:fitvera/home/profile.dart';
 import 'package:fitvera/receipy_book/receipy_book.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
+import '../BMR/bmr_calculator.dart';
 import '../gym/gym.dart';
 import 'home.dart';
 
@@ -54,8 +54,8 @@ class _homeNavBarState extends State<homeNavBar> {
                   text: 'Recipe Book',
                 ),
                 GButton(
-                  icon: LineIcons.user,
-                  text: 'Profile',
+                  icon: LineIcons.lock,
+                  text: 'Weight',
                 ),
               ],
               selectedIndex: _selectedIndex,
@@ -80,7 +80,7 @@ class _homeNavBarState extends State<homeNavBar> {
       case 2:
         return Receipy_Book();
       case 3:
-        return Profile();
+        return BMR_Calculator();
       default:
         return Center(child: Text('Page not found'));
     }

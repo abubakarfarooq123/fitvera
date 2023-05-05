@@ -4,9 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import 'analytics.dart';
-import 'analytics_progress.dart';
 import 'cardio_strech_screen.dart';
-import 'cardio_strectch_details.dart';
 import 'day_detail.dart';
 import 'nuitrition.dart';
 
@@ -289,7 +287,7 @@ class _Start_open_programState extends State<Start_open_program> {
                       onTap: (){
                         Navigator.push(
                             context, MaterialPageRoute(
-                            builder: (context) => Analytics_Progress()));
+                            builder: (context) => Analytics()));
 
                       },
                       child: Container(

@@ -1,7 +1,10 @@
+import 'package:fitvera/gym/weight_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'bar_chart/bar_graph.dart';
+import 'goals.dart';
+import 'limitations.dart';
 class Analytics_Progress extends StatefulWidget {
   const Analytics_Progress({Key? key}) : super(key: key);
 
@@ -367,7 +370,11 @@ class _Analytics_ProgressState extends State<Analytics_Progress> {
                       width: 10,
                     ),
                     InkWell(
-                      onTap:(){},
+                      onTap:(){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Goals()));
+                      },
                       child: Container(
                         height: 30,
                         width: 80,
@@ -388,7 +395,11 @@ class _Analytics_ProgressState extends State<Analytics_Progress> {
                       width: 10,
                     ),
                     InkWell(
-                      onTap:(){},
+                      onTap:(){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Limitations()));
+                      },
                       child: Container(
                         height: 30,
                         width: 80,
@@ -409,7 +420,11 @@ class _Analytics_ProgressState extends State<Analytics_Progress> {
                       width: 10,
                     ),
                     InkWell(
-                      onTap:(){},
+                      onTap:(){
+                        Navigator.push(
+                            context, MaterialPageRoute(
+                            builder: (context) => Weight_Nav()));
+                      },
                       child: Container(
                         height: 30,
                         width: 80,

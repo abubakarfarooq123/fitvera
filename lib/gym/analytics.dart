@@ -1,8 +1,6 @@
-import 'package:fitvera/gym/cardio_strectch_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'meat_detail.dart';
 
 class Analytics extends StatefulWidget {
   const Analytics({Key? key}) : super(key: key);
